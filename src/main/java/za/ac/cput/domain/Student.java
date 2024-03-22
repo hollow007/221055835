@@ -1,5 +1,11 @@
 package za.ac.cput.domain;
 
+/**
+ * Mpumzi Mbula
+ * 219053324
+ * Date:22/03/2024
+ *
+ */
 public class Student {
     private String studentNumber;
     private String idNumber;
