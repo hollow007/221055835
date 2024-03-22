@@ -1,5 +1,6 @@
 import za.ac.cput.domain.LecturerSubject;
 import za.ac.cput.domain.Student;
+import za.ac.cput.domain.StudentSubject;
 import za.ac.cput.domain.Subject;
 
 public class Main {
@@ -18,6 +19,7 @@ public class Main {
                 .buildSubject();
 
         System.out.println(subject);
-
+        StudentSubject stdSubj = new StudentSubject.StudentSubjectBuilder().setStudent(student).setSubject(subject).buildStudentSubject();
+        System.out.println(stdSubj);
     }
 }
