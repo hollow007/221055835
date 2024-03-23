@@ -1,13 +1,29 @@
-import za.ac.cput.domain.LecturerSubject;
-import za.ac.cput.domain.Student;
-import za.ac.cput.domain.StudentSubject;
-import za.ac.cput.domain.Subject;
+import za.ac.cput.domain.*;
+import za.ac.cput.factory.ContactFactory;
+import za.ac.cput.factory.StudentFactory;
 
 public class Main {
     public static void main(String[] args) {
-        Student student=new Student.StudentBuilder().setStudentNumber("219053324").setFirstName("mpumzi").build();
-        LecturerSubject lecturerSubject = new LecturerSubject.LecturerSubjectBuilder().setContractType("Part-Time").build();
+//        Student student=new Student.StudentBuilder().setStudentNumber("219053324").
+//                setIdNumber("0006205484089").
+//                setFirstName("Mpumzi").
+//                setLastName("Mbula").
+//                setGender("Male").
+//                setEthnicity("African").
+//                setContact(new Contact.ContactBuilder().setPhoneNumber("0658436358").
+//                        setEmailAddress("219053324@mycput.ac.za").
+//                        setAddress("Ny 6 No 106 Gugulethu 7750").
+//                        build()).
+//                build()
+        //;
+
+
+//       System.out.println(student);
+        System.out.println("---------------------------------------------");
+        Student student=StudentFactory.buildStudent("219053324","0006205484089","Mpumzi","Mbula","Male","African", ContactFactory.buildContact("0658436358","219053324@mycput.ac.za","Ny 6 No 106 Gugulethu 7750"));
         System.out.println(student);
+        System.out.println("---------------------------------------------");
+        LecturerSubject lecturerSubject = new LecturerSubject.LecturerSubjectBuilder().setContractType("Part-Time").build();
         System.out.println(lecturerSubject);
 
 
