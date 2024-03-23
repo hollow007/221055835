@@ -1,7 +1,7 @@
-import za.ac.cput.domain.LecturerSubject;
-import za.ac.cput.domain.Student;
-import za.ac.cput.domain.StudentSubject;
-import za.ac.cput.domain.Subject;
+import za.ac.cput.domain.*;
+import za.ac.cput.factory.LecturerSubjectFactory;
+
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Main {
 
 
         Subject subject  = new Subject.SubjectBuilder().setSubjectCode("ADP3")
-                .setSubjectName("Appications Develpments Practice 3")
+                .setSubjectName("Applications Development Practice 3")
                 .setDuration("3 years")
                 .setEnrollmentCapacity(150)
                 .setSubjectCredits(30)
@@ -21,5 +21,18 @@ public class Main {
         System.out.println(subject);
         StudentSubject stdSubj = new StudentSubject.StudentSubjectBuilder().setStudent(student).setSubject(subject).buildStudentSubject();
         System.out.println(stdSubj);
+
+
+        Lecturer lecturer = new Lecturer.Builder().build();
+        subject = new Subject.SubjectBuilder().buildSubject();
+
+        LocalDate assignmentDate = LocalDate.of(2023, 1, 15);
+        String contractType = "Full-time";
+        String roomNumber = "105";
+
+        lecturerSubject = LecturerSubjectFactory.createLecturerSubject(lecturer, subject, assignmentDate,
+                contractType, roomNumber);
+
+        System.out.println(lecturerSubject.toString());
     }
 }

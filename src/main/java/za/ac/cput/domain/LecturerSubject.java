@@ -6,6 +6,7 @@ import java.time.LocalDate;
    LecturerSubject model class
    Author: Cavan Ramone Swartz (221055835)
    Date: 22 March 2024
+   https://github.com/hollow007/221055835
  */
 public class LecturerSubject {
 
