@@ -69,32 +69,25 @@ public class LecturerSubject {
         private String contractType;
         private String roomNumber;
 
-        public LecturerSubjectBuilder setLecturer(Lecturer lecturer) {
-
+        public void setLecturer(Lecturer lecturer) {
             this.lecturer = lecturer;
-            return this;
         }
 
-        public LecturerSubjectBuilder setSubject(Subject subject) {
-
+        public void setSubject(Subject subject) {
             this.subject = subject;
-            return this;
         }
 
-        public LecturerSubjectBuilder setAssignmentDate(LocalDate assignmentDate) {
+        public void setAssignmentDate(LocalDate assignmentDate) {
             this.assignmentDate = assignmentDate;
-            return this;
         }
 
-        public LecturerSubjectBuilder setContractType(String contractType) {
+        public LecturerSubject setContractType(String contractType) {
             this.contractType = contractType;
-            return this;
+            return null;
         }
 
-        public LecturerSubjectBuilder setRoomNumber(String roomNumber) {
-
+        public void setRoomNumber(String roomNumber) {
             this.roomNumber = roomNumber;
-            return this;
         }
 
         public LecturerSubject build(){

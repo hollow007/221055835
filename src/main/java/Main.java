@@ -1,6 +1,7 @@
 import za.ac.cput.domain.*;
 import za.ac.cput.factory.ContactFactory;
 import za.ac.cput.factory.StudentFactory;
+import za.ac.cput.factory.SubjectFactory;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,15 +28,24 @@ public class Main {
         System.out.println(lecturerSubject);
 
 
-        Subject subject  = new Subject.SubjectBuilder().setSubjectCode("ADP3")
-                .setSubjectName("Appications Develpments Practice 3")
-                .setDuration("3 years")
-                .setEnrollmentCapacity(150)
-                .setSubjectCredits(30)
-                .buildSubject();
+//        Subject subject  = new Subject.SubjectBuilder().setSubjectCode("ADP3")
+//                .setSubjectName("Appications Develpments Practice 3")
+//                .setDuration("3 years")
+//                .setEnrollmentCapacity(150)
+//                .setSubjectCredits(30)
+//                .buildSubject();
+//
+//        System.out.println(subject);
+//        StudentSubject stdSubj = new StudentSubject.StudentSubjectBuilder().setStudent(student).setSubject(subject).buildStudentSubject();
+//        System.out.println(stdSubj);
 
+    Subject subject = SubjectFactory.buildSubject("ADP3", "Appications Develpments Practice 3",
+                                                  "Application Development using Java programming language",
+                                                  "3 years", 30, 150) ;
+
+        System.out.println("Subjects:");
         System.out.println(subject);
-        StudentSubject stdSubj = new StudentSubject.StudentSubjectBuilder().setStudent(student).setSubject(subject).buildStudentSubject();
-        System.out.println(stdSubj);
+
+
     }
 }
