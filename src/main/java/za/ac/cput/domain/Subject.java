@@ -7,7 +7,7 @@ public class Subject {
     private String subjectName;
     private String description;
     private String duration;
-    private int courseCredits;
+    private int subjectCredits;
     private int enrollmentCapacity;
 
     private Subject(){}
@@ -16,7 +16,8 @@ public class Subject {
      this.subjectCode =   builder.subjectCode;
      this.subjectName = builder.subjectName;
      this.description = builder.description;
-     this.courseCredits = builder.courseCredits;
+     this.duration = builder.duration;
+     this.subjectCredits = builder.subjectCredits;
      this.enrollmentCapacity = builder.enrollmentCapacity;
 
     }
@@ -37,8 +38,8 @@ public class Subject {
         return duration;
     }
 
-    public int getCourseCredits() {
-        return courseCredits;
+    public int getSubjectCredits() {
+        return subjectCredits;
     }
 
     public int getEnrollmentCapacity() {
@@ -52,7 +53,7 @@ public class Subject {
                 ", subjectName='" + subjectName + '\'' +
                 ", description='" + description + '\'' +
                 ", duration='" + duration + '\'' +
-                ", courseCredits=" + courseCredits +
+                ", courseCredits=" + subjectCredits +
                 ", enrollmentCapacity=" + enrollmentCapacity +
                 '}';
     }
@@ -62,7 +63,7 @@ public class Subject {
         private String subjectName;
         private String description;
         private String duration;
-        private int courseCredits;
+        private int subjectCredits;
         private int enrollmentCapacity;
 
         public SubjectBuilder setSubjectCode(String subjectCode){
@@ -85,8 +86,8 @@ public class Subject {
             return this;
 
         }
-        public SubjectBuilder setSubjectCredits(int courseCredits){
-            this.courseCredits = courseCredits;
+        public SubjectBuilder setSubjectCredits(int subjectCredits){
+            this.subjectCredits = subjectCredits;
             return this;
 
         }
