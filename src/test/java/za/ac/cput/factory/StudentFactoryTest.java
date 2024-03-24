@@ -27,7 +27,7 @@ class StudentFactoryTest {
         student4=student3;
     }
     @Test
-    void buildEmployee(){
+    void checkIfStudentNotNull(){
         assertNotNull(student);
         System.out.println(student.toString());
     }
