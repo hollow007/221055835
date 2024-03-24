@@ -29,9 +29,9 @@ public LocalDate getEnrollmentDate(){
     @Override
     public String toString() {
         return "StudentSubject{" +
-                "student=" + student +
-                ", subject=" + subject +
-                ", enrollmentDate=" + enrollmentDate +
+                "\n" + student +
+                "\n" + subject +
+                "\nenrollmentDate=" + enrollmentDate +
                 '}';
     }
 

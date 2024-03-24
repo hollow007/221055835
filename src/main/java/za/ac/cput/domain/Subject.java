@@ -16,6 +16,7 @@ public class Subject {
      this.subjectCode =   builder.subjectCode;
      this.subjectName = builder.subjectName;
      this.description = builder.description;
+     this.duration = builder.duration;
      this.courseCredits = builder.courseCredits;
      this.enrollmentCapacity = builder.enrollmentCapacity;
 
@@ -48,10 +49,10 @@ public class Subject {
     @Override
     public String toString() {
         return "Subject{" +
-                "subjectCode='" + subjectCode + '\'' +
+                "\nsubjectCode='" + subjectCode + '\'' +
                 ", subjectName='" + subjectName + '\'' +
-                ", description='" + description + '\'' +
-                ", duration='" + duration + '\'' +
+                "\ndescription='" + description + '\'' +
+                "\nduration='" + duration + '\'' +
                 ", courseCredits=" + courseCredits +
                 ", enrollmentCapacity=" + enrollmentCapacity +
                 '}';

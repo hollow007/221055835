@@ -67,12 +67,12 @@ public class Lecturer {
     @Override
     public String toString() {
         return "Lecturer{" +
-                "employeeId=" + employeeId +
-                ", firstName=" + firstName +
-                ", lastName=" + lastName +
-                ", gender='" + gender + '\'' +
-                ", salary=" + salary +
-                ", contact=" + contact +
+                "\nemployeeId=" + employeeId +
+                "\nfirstName=" + firstName +
+                "\nlastName=" + lastName +
+                "\ngender='" + gender + '\'' +
+                "\nsalary=" + salary +
+                "\n" + contact +
                 '}';
     }
 
