@@ -29,4 +29,10 @@ public class StudentFactory {
                 setContact(contact).
                 build();
     }
+    public static Student buildStudent(String studentNumber,String firstName){
+        if(StudentHelper.isNullOrEmpty(studentNumber)||StudentHelper.isNullOrEmpty(firstName)){
+            return null;
+        }
+        return new Student.StudentBuilder().setStudentNumber(studentNumber).setFirstName(firstName).build();
+    }
 }
