@@ -50,11 +50,11 @@ public class LecturerSubject {
     @Override
     public String toString() {
         return "LecturerSubject{" +
-                "lecturer=" + lecturer +
-                ", subject=" + subject +
-                ", assignmentDate=" + assignmentDate +
-                ", contractType='" + contractType + '\'' +
-                ", roomNumber='" + roomNumber + '\'' +
+                "\nlecturer=" + lecturer +
+                "\nsubject=" + subject +
+                "\nassignmentDate=" + assignmentDate +
+                "\ncontractType='" + contractType + '\'' +
+                "\nroomNumber='" + roomNumber + '\'' +
                 '}';
     }
 
