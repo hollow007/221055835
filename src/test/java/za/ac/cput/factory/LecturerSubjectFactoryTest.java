@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
    LecturerSubjectFactoryTest class
    Author: Cavan Ramone Swartz (221055835)
    Date: 23 March 2024
-   https://github.com/hollow007/221055835
+   https://github.com/hollow007/mystudentregistrationapplication
  */
 
 class LecturerSubjectFactoryTest {

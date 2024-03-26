@@ -9,7 +9,7 @@ import java.time.LocalDate;
    LecturerSubjectHelper class
    Author: Cavan Ramone Swartz (221055835)
    Date: 23 March 2024
-   https://github.com/hollow007/221055835
+   https://github.com/hollow007/mystudentregistrationapplication
  */
 public class LecturerSubjectHelper {
 
