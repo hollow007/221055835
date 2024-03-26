@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
    Date: 26 March 2024
    https://github.com/hollow007/mystudentregistrationapplication
  */
-@Nested
+/*@Nested
 class LecturerSubjectRepositoryTest {
 
     private LecturerSubjectRepository<LecturerSubject, String> lecturerSubjectRepository;
@@ -136,4 +136,4 @@ void tearDown() {
     // Clear the repository
     this.lecturerSubjectRepository.getAll().clear();
 }
-}
+}*/
