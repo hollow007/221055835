@@ -7,7 +7,7 @@ public class Subject {
     private String subjectName;
     private String description;
     private String duration;
-    private int subjectCredits;
+    private int courseCredits;
     private int enrollmentCapacity;
 
     private Subject(){}
@@ -17,7 +17,7 @@ public class Subject {
      this.subjectName = builder.subjectName;
      this.description = builder.description;
      this.duration = builder.duration;
-     this.subjectCredits = builder.subjectCredits;
+     this.courseCredits = builder.courseCredits;
      this.enrollmentCapacity = builder.enrollmentCapacity;
 
     }
@@ -38,8 +38,8 @@ public class Subject {
         return duration;
     }
 
-    public int getSubjectCredits() {
-        return subjectCredits;
+    public int getCourseCredits() {
+        return courseCredits;
     }
 
     public int getEnrollmentCapacity() {
@@ -49,11 +49,11 @@ public class Subject {
     @Override
     public String toString() {
         return "Subject{" +
-                "subjectCode='" + subjectCode + '\'' +
+                "\nsubjectCode='" + subjectCode + '\'' +
                 ", subjectName='" + subjectName + '\'' +
-                ", description='" + description + '\'' +
-                ", duration='" + duration + '\'' +
-                ", courseCredits=" + subjectCredits +
+                "\ndescription='" + description + '\'' +
+                "\nduration='" + duration + '\'' +
+                ", courseCredits=" + courseCredits +
                 ", enrollmentCapacity=" + enrollmentCapacity +
                 '}';
     }
@@ -63,7 +63,7 @@ public class Subject {
         private String subjectName;
         private String description;
         private String duration;
-        private int subjectCredits;
+        private int courseCredits;
         private int enrollmentCapacity;
 
         public SubjectBuilder setSubjectCode(String subjectCode){
@@ -86,8 +86,8 @@ public class Subject {
             return this;
 
         }
-        public SubjectBuilder setSubjectCredits(int subjectCredits){
-            this.subjectCredits = subjectCredits;
+        public SubjectBuilder setSubjectCredits(int courseCredits){
+            this.courseCredits = courseCredits;
             return this;
 
         }
