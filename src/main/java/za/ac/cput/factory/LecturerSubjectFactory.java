@@ -4,7 +4,6 @@ import za.ac.cput.domain.LecturerSubject;
 import za.ac.cput.domain.Lecturer;
 import za.ac.cput.domain.Subject;
 import za.ac.cput.util.LecturerSubjectHelper;
-
 import java.time.LocalDate;
 
 /* LecturerSubjectFactory.java

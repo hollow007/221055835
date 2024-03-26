@@ -63,6 +63,10 @@ public class LecturerSubject {
         return null;
     }
 
+    public void setContractType(String contractType) {
+        this.contractType = contractType;
+    }
+
     public static class LecturerSubjectBuilder{
         private Lecturer lecturer;
         private Subject subject;

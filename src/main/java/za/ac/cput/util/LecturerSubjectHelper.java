@@ -1,6 +1,7 @@
 package za.ac.cput.util;
 
 import za.ac.cput.domain.Lecturer;
+import za.ac.cput.domain.LecturerSubject;
 import za.ac.cput.domain.Subject;
 
 import java.time.LocalDate;
@@ -61,6 +62,10 @@ public class LecturerSubjectHelper {
 
 
     public static boolean isNullOrEmpty(LocalDate assignmentDate) {
+        return false;
+    }
+
+    public static boolean isLecturerSubjectNullOrEmpty(LecturerSubject lecturerSubject) {
         return false;
     }
 }
