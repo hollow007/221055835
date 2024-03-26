@@ -1,6 +1,6 @@
 package za.ac.cput.repository;
 
-import org.junit.jupiter.api.BeforeEach;
+/*import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Lecturer;
@@ -15,7 +15,7 @@ import za.ac.cput.factory.LecturerSubjectFactory;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;*/
 /* LecturerSubjectRepository.java
    LecturerSubjectRepository class
    Author: Cavan Ramone Swartz (221055835)
