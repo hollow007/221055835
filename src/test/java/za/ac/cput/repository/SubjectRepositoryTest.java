@@ -44,20 +44,18 @@ class SubjectRepositoryTest {
 
     }
 
-//    @Test
-//    void update() {
-//        subjectRepository.create(subject1);
-//        Subject newSubject = SubjectFactory.buildSubject(subject1.getSubjectCode(), "Applications Dev 2");
-//
-//       Subject updatedSubject = subjectRepository.update(newSubject);
-//        assertEquals(, );
-//
-////        subjectRepository.create(subject1);
-////        subject1 = subject2;
-////        Subject updatedSubject = subjectRepository.update(subject1);
-////        assertEquals(subject1, subject2);
-//
-//    }
+    @Test
+    void update() {
+        subjectRepository.create(subject1);
+
+//          subject1 = new Subject.SubjectBuilder().setSubjectCode(subject1.getSubjectCode()).setSubjectName("Applications Dev 2")
+//                 .buildSubject();
+          subject1 = SubjectFactory.buildSubject(subject1.getSubjectCode(), "Applications Dev 2");
+        Subject updatedSubject = subjectRepository.update(subject1);
+        assertEquals("Applications Dev 2", subject1.getSubjectName());
+        assertEquals("ADP2", subject1.getSubjectCode());
+
+  }
 
     @Test
     void delete() {
