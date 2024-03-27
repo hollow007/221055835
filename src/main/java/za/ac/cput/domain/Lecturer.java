@@ -2,7 +2,7 @@
   Day : 22 March 2024
   Time : 9:10pm
   GitHub Repo :Fluffy-J Joshua@mycput
-
+  GitHub repository :mystudentregistrationapplication
 
 */
 package za.ac.cput.domain;
@@ -24,6 +24,7 @@ public class Lecturer {
       this.lastName = builder.lastName;
       this.salary = builder.salary;
       this.gender = builder.gender;
+      this.contact = builder.contact;
 
     }
 
@@ -80,6 +81,7 @@ public class Lecturer {
         private int employeeId;
         private String firstName , lastName , gender ;
         private double salary ;
+        private Contact contact;
 
 
      public Builder setEmployeeId(int employeeId){
@@ -97,6 +99,19 @@ public class Lecturer {
 
      public Builder setLastName(String lastName){
          this.lastName = lastName;
+         return this;
+
+     }
+
+     public Builder setGender(String gender){
+         this.gender = gender;
+         return this;
+
+     }
+
+
+     public Builder setContact(Contact contact){
+         this.contact = contact;
          return this;
 
      }

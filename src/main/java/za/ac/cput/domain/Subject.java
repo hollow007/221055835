@@ -1,13 +1,13 @@
 package za.ac.cput.domain;
-//Mlungisi Mbuyazi
+// Mlungisi L. Mbuyazi
 // 221164014
-// https://github.com/Skiet88/universitycourse
+// https://github.com/Skiet88/studentregistrationapplication
 public class Subject {
     private String subjectCode;
     private String subjectName;
     private String description;
     private String duration;
-    private int courseCredits;
+    private int subjectCredits;
     private int enrollmentCapacity;
 
     private Subject(){}
@@ -17,7 +17,7 @@ public class Subject {
      this.subjectName = builder.subjectName;
      this.description = builder.description;
      this.duration = builder.duration;
-     this.courseCredits = builder.courseCredits;
+     this.subjectCredits = builder.subjectCredits;
      this.enrollmentCapacity = builder.enrollmentCapacity;
 
     }
@@ -38,8 +38,8 @@ public class Subject {
         return duration;
     }
 
-    public int getCourseCredits() {
-        return courseCredits;
+    public int getSubjectCredits() {
+        return subjectCredits;
     }
 
     public int getEnrollmentCapacity() {
@@ -53,7 +53,7 @@ public class Subject {
                 ", subjectName='" + subjectName + '\'' +
                 "\ndescription='" + description + '\'' +
                 "\nduration='" + duration + '\'' +
-                ", courseCredits=" + courseCredits +
+                ", subjectCredits=" + subjectCredits +
                 ", enrollmentCapacity=" + enrollmentCapacity +
                 '}';
     }
@@ -63,7 +63,7 @@ public class Subject {
         private String subjectName;
         private String description;
         private String duration;
-        private int courseCredits;
+        private int subjectCredits;
         private int enrollmentCapacity;
 
         public SubjectBuilder setSubjectCode(String subjectCode){
@@ -86,8 +86,8 @@ public class Subject {
             return this;
 
         }
-        public SubjectBuilder setSubjectCredits(int courseCredits){
-            this.courseCredits = courseCredits;
+        public SubjectBuilder setSubjectCredits(int subjectCredits){
+            this.subjectCredits = subjectCredits;
             return this;
 
         }
