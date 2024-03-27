@@ -49,7 +49,7 @@ class SubjectRepositoryTest {
         subjectRepository.create(subject1);
 
 //          subject1 = new Subject.SubjectBuilder().setSubjectCode(subject1.getSubjectCode()).setSubjectName("Applications Dev 2")
-//                  .buildSubject();
+//                 .buildSubject();
           subject1 = SubjectFactory.buildSubject(subject1.getSubjectCode(), "Applications Dev 2");
         Subject updatedSubject = subjectRepository.update(subject1);
         assertEquals("Applications Dev 2", subject1.getSubjectName());
