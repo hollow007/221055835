@@ -21,11 +21,11 @@ public class Main {
 
 //       System.out.println(student);
         System.out.println("---------------------------------------------");
-        Student student=StudentFactory.buildStudent("219053324","0006205484089","Mpumzi","Mbula","Male","African", ContactFactory.buildContact("0658436358","219053324@mycput.ac.za","Ny 6 No 106 Gugulethu 7750"));
-        System.out.println(student);
-        System.out.println("---------------------------------------------");
-        LecturerSubject lecturerSubject = new LecturerSubject.LecturerSubjectBuilder().setContractType("Part-Time").build();
-        System.out.println(lecturerSubject);
+//        Student student=StudentFactory.buildStudent("219053324","0006205484089","Mpumzi","Mbula","Male","African", ContactFactory.buildContact("0658436358","219053324@mycput.ac.za","Ny 6 No 106 Gugulethu 7750"));
+//        System.out.println(student);
+//        System.out.println("---------------------------------------------");
+//        LecturerSubject lecturerSubject = new LecturerSubject.LecturerSubjectBuilder().setContractType("Part-Time").build();
+//        System.out.println(lecturerSubject);
 
 
 //        Subject subject  = new Subject.SubjectBuilder().setSubjectCode("ADP3")

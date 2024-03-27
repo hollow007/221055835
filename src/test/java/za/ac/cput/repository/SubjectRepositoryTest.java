@@ -8,7 +8,9 @@ import za.ac.cput.factory.SubjectFactory;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+//Mlungisi L. Mbuyazi
+// 221164014
+// https://github.com/Skiet88/studentregistrationapplication
 class SubjectRepositoryTest {
     private SubjectRepository subjectRepository;
     private Subject subject1;

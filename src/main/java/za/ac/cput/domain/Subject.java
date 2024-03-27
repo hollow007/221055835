@@ -1,7 +1,7 @@
 package za.ac.cput.domain;
-//Mlungisi Mbuyazi
+//Mlungisi L. Mbuyazi
 // 221164014
-// https://github.com/Skiet88/universitycourse
+// https://github.com/Skiet88/studentregistrationapplication
 public class Subject {
     private String subjectCode;
     private String subjectName;
