@@ -2,7 +2,7 @@ package za.ac.cput.repository;
 
 import za.ac.cput.domain.Student;
 import za.ac.cput.domain.Subject;
-//Mlungisi L. Mbuyazi
+// Mlungisi L. Mbuyazi
 // 221164014
 // https://github.com/Skiet88/studentregistrationapplication
 import java.util.ArrayList;

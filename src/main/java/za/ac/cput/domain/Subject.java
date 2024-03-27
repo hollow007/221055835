@@ -1,5 +1,5 @@
 package za.ac.cput.domain;
-//Mlungisi L. Mbuyazi
+// Mlungisi L. Mbuyazi
 // 221164014
 // https://github.com/Skiet88/studentregistrationapplication
 public class Subject {

@@ -6,7 +6,7 @@ import za.ac.cput.domain.Subject;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//Mlungisi L. Mbuyazi
+// Mlungisi L. Mbuyazi
 // 221164014
 // https://github.com/Skiet88/studentregistrationapplication
 class SubjectFactoryTest {
