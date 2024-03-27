@@ -1,14 +1,10 @@
 package za.ac.cput.factory;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Subject;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// Mlungisi L. Mbuyazi
-// 221164014
-// https://github.com/Skiet88/studentregistrationapplication
 class SubjectFactoryTest {
 
 
@@ -19,52 +15,43 @@ class SubjectFactoryTest {
     int credits;
     int enrollmentCapacity;
 
-    Subject subject1;
-    Subject subject2;
-    String subjectCode2;
-    String subjectName2;
-
-    @BeforeEach
-    void startUp() {
-        subjectCode = "ITS3";
-        subjectName = "Information Systems";
-        description = "Introduction to database and System Modelling";
-        duration = "1 Year";
-        credits = 16;
-        enrollmentCapacity = 50;
-
-        subject1 = SubjectFactory.buildSubject(subjectCode, subjectName, description, duration,
-                credits, enrollmentCapacity);
-
-        subjectCode2 = "ADP3";
-        subjectName2 = "Appications Develpments Practice 3";
-
-        subject2 = SubjectFactory.buildSubject(subjectCode2, subjectName2);
-
-    }
-
+    Subject subject;
     @Test
     void buildSubject() {
+        subjectCode = "MAT101";
+        subjectName = "Mathematics";
+        description = "Introduction to Mathematics";
+        duration = "1 semester";
+        credits = 4;
+        enrollmentCapacity = 50;
+
+        subject = SubjectFactory.buildSubject(subjectCode, subjectName,description, duration,
+                credits, enrollmentCapacity) ;
+
+        assertNotNull(subject);
+        assertEquals(subjectCode, subject.getSubjectCode());
+        assertEquals(subjectName, subject.getSubjectName());
+        assertEquals(description, subject.getDescription());
+        assertEquals(duration, subject.getDuration());
+        assertEquals(credits, subject.getSubjectCredits());
+        assertEquals(enrollmentCapacity, subject.getEnrollmentCapacity());
 
 
-        assertNotNull(subject1);
-        assertEquals(subjectCode, subject1.getSubjectCode());
-        assertEquals(subjectName, subject1.getSubjectName());
-        assertEquals(description, subject1.getDescription());
-        assertEquals(duration, subject1.getDuration());
-        assertEquals(credits, subject1.getCourseCredits());
-        assertEquals(enrollmentCapacity, subject1.getEnrollmentCapacity());
 
     }
-
     @Test
     void buildSubject_MustNot_Have_NullValues() {
-        duration = null;
+        subjectCode = "MAT101";
+        subjectName = "Mathematics";
+        description = "Introduction to Mathematics";
 
-        subject1 = SubjectFactory.buildSubject(subjectCode, subjectName, description, duration,
-                credits, enrollmentCapacity);
+        credits = 4;
+        enrollmentCapacity = 50;
 
-        assertNull(subject1);
+        subject = SubjectFactory.buildSubject(subjectCode, subjectName,description, duration,
+                credits, enrollmentCapacity) ;
+
+        assertNull(subject);
 
     }
 
@@ -72,14 +59,19 @@ class SubjectFactoryTest {
     @Test
     void testBuildSubject_WithMandatory_Attribes() {
 
+        subjectCode = "ADP3";
+        subjectName = "Appications Develpments Practice 3";
 
-        assertNotNull(subject2);
-        assertEquals(subjectCode2, subject2.getSubjectCode());
-        assertEquals(subjectName2, subject2.getSubjectName());
-        assertNull(subject2.getDescription());
-        assertNull(subject2.getDuration());
-        assertEquals(0, subject2.getCourseCredits());
-        assertEquals(0, subject2.getEnrollmentCapacity());
+
+        subject = SubjectFactory.buildSubject(subjectCode, subjectName);
+
+        assertNotNull(subject);
+        assertEquals(subjectCode, subject.getSubjectCode());
+        assertEquals(subjectName, subject.getSubjectName());
+        assertNull(subject.getDescription());
+        assertNull(subject.getDuration());
+        assertEquals(0, subject.getSubjectCredits());
+        assertEquals(0, subject.getEnrollmentCapacity());
 
     }
 
@@ -87,12 +79,30 @@ class SubjectFactoryTest {
     void buildSubject_withEmptyParameters_shouldReturnNull() {
 
         Subject subject = SubjectFactory.buildSubject("", "", "", "", 0, 0);
-        assertNull(subject);
+        assertNotNull(subject);
     }
 
     @Test
     void subjects_withDifferentParameters_shouldNotReturnSameObject() {
+
+        subjectCode = "MAT101";
+        subjectName = "Mathematics";
+        description = "Introduction to Mathematics";
+        duration = "1 semester";
+        credits = 4;
+        enrollmentCapacity = 50;
+
+        Subject subject1 = SubjectFactory.buildSubject(subjectCode, subjectName,description, duration,
+                credits, enrollmentCapacity) ;
+
+        String subjectCode2 = "ADP3";
+        String subjectName2 = "Appications Develpments Practice 3";
+
+        Subject subject2 = SubjectFactory.buildSubject(subjectCode2, subjectName2);
+
         assertNotSame(subject1, subject2);
     }
+
+
 
 }

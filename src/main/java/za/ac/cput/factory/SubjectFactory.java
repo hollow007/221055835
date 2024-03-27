@@ -3,9 +3,9 @@ package za.ac.cput.factory;
 import za.ac.cput.domain.Subject;
 import za.ac.cput.util.SubjectHelper;
 
-// Mlungisi L. Mbuyazi
+//Mlungisi Mbuyazi
 // 221164014
-// https://github.com/Skiet88/studentregistrationapplication
+// https://github.com/Skiet88/universitycourse
 public class SubjectFactory {
 
     public static Subject buildSubject(String subjectCode, String subjectName, String description, String duration, int credits, int enrollmentcapacity){
@@ -32,6 +32,8 @@ public class SubjectFactory {
                 .setSubjectName(subjectName)
                 .buildSubject();
     }
+
+
 
 
 }
