@@ -1,7 +1,7 @@
 package za.ac.cput.util;
-//Mlungisi Mbuyazi
+// Mlungisi L. Mbuyazi
 // 221164014
-// https://github.com/Skiet88/universitycourse
+// https://github.com/Skiet88/studentregistrationapplication
 public class SubjectHelper {
     public static boolean isEmpty(String s){
         if (s == null ||  s.isEmpty()){return true;}
