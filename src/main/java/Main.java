@@ -1,50 +1,53 @@
-import za.ac.cput.domain.*;
+/*@author Joshua Mokwebo 222191562
+  Day : 27 March 2024
+  Time : 2:00PM
+  GitHub Account :Fluffy-J Joshua@mycput
+  GitHub repository :mystudentregistrationapplication
+
+*/
+import za.ac.cput.domain.Contact;
+import za.ac.cput.domain.Lecturer;
 import za.ac.cput.factory.ContactFactory;
-import za.ac.cput.factory.StudentFactory;
-import za.ac.cput.factory.SubjectFactory;
+import za.ac.cput.factory.LecturerFactory;
+import za.ac.cput.repository.LecturerRepository;
+import za.ac.cput.util.LecturerHelper;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
-//        Student student=new Student.StudentBuilder().setStudentNumber("219053324").
-//                setIdNumber("0006205484089").
-//                setFirstName("Mpumzi").
-//                setLastName("Mbula").
-//                setGender("Male").
-//                setEthnicity("African").
-//                setContact(new Contact.ContactBuilder().setPhoneNumber("0658436358").
-//                        setEmailAddress("219053324@mycput.ac.za").
-//                        setAddress("Ny 6 No 106 Gugulethu 7750").
-//                        build()).
-//                build()
-        //;
 
 
-//       System.out.println(student);
-        System.out.println("---------------------------------------------");
-        Student student=StudentFactory.buildStudent("219053324","0006205484089","Mpumzi","Mbula","Male","African", ContactFactory.buildContact("0658436358","219053324@mycput.ac.za","Ny 6 No 106 Gugulethu 7750"));
-        System.out.println(student);
-        System.out.println("---------------------------------------------");
-        LecturerSubject lecturerSubject = new LecturerSubject.LecturerSubjectBuilder().setContractType("Part-Time").build();
-        System.out.println(lecturerSubject);
+        Contact c1 = ContactFactory.buildContact("067975722" , "farananijshua@gamil.com", "34BaterseaDrive");
+
+        Lecturer l1 = new Lecturer.Builder().setEmployeeId(LecturerHelper.generateId()).setFirstName("Mokwebo").setLastName("Joshua").setContact(c1).build();
+        String employeeId = String.valueOf(l1.getEmployeeId());
+        //System.out.println(l1.toString());
+
+        LecturerRepository repository = null;
+        repository = (LecturerRepository) repository.getRepository();
+        ArrayList<Lecturer>lectureList = new ArrayList<>();
+
+        repository.create(l1);
+        repository.read(employeeId);
+        lectureList = (ArrayList<Lecturer>)repository.getall();
+        System.out.println(lectureList.toString());
+
+        repository.delete(employeeId);
+        System.out.println(lectureList.toString());
+
+        repository.update(l1);
+        System.out.println(lectureList.toString());
 
 
-//        Subject subject  = new Subject.SubjectBuilder().setSubjectCode("ADP3")
-//                .setSubjectName("Appications Develpments Practice 3")
-//                .setDuration("3 years")
-//                .setEnrollmentCapacity(150)
-//                .setSubjectCredits(30)
-//                .buildSubject();
-//
-//        System.out.println(subject);
-//        StudentSubject stdSubj = new StudentSubject.StudentSubjectBuilder().setStudent(student).setSubject(subject).buildStudentSubject();
-//        System.out.println(stdSubj);
 
-    Subject subject = SubjectFactory.buildSubject("ADP3", "Appications Develpments Practice 3",
-                                                  "Application Development using Java programming language",
-                                                  "3 years", 30, 150) ;
 
-        System.out.println("Subjects:");
-        System.out.println(subject);
+
+
 
 
     }
